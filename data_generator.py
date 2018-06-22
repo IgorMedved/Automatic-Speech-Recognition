@@ -19,7 +19,7 @@ RNG_SEED = 123
 
 class AudioGenerator():
     def __init__(self, step=10, window=20, max_freq=8000, mfcc_dim=13,
-        minibatch_size=20, desc_file=None, spectrogram=True, max_duration=10.0, 
+        minibatch_size=20, desc_file=None, spectrogram=True, max_duration=17.0, 
         sort_by_duration=False):
         """
         Params:
@@ -163,7 +163,7 @@ class AudioGenerator():
                 self.cur_test_index = 0
             yield ret
 
-    def load_train_data(self, desc_file='train_corpus.json'):
+    def load_train_data(self, desc_file='train_360.json'):
         self.load_metadata_from_desc_file(desc_file, 'train')
         self.fit_train()
         if self.sort_by_duration:

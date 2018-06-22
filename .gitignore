@@ -5,3 +5,13 @@ __pycache__/
 *.tar.gz
 *.pyc
 *.json
+*.zip
+
+languageModel/
+
+*.h5
+*.pickle
+
+!results/model_endb41_.h5
+!model_endb41_.pickle
+!train_corpus.json
