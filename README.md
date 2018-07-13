@@ -16,6 +16,16 @@ The theory is based on following textbooks and articles
 ![ASR Pipeline][image1]
 
 ## Project Results
+Here is the result of testing the final model on the random spech segment represented by "True transcription". Below you can see
+what the system predicted. The system is not perfect, but very very close!
+
+True transcription:
+
+and they lived all alone in a little hut away at the end of the village street for tom's mother had died when he was a baby you may not suppose that tom was a very good boy since he had such a queer father but neither was he very bad
+--------------------------------------------------------------------------------
+Predicted transcription:
+
+and they lived all alone in a little hut away at the end of the village street for tom'smother had died when he was a baby you may not suppose at tom as a very good boy since he had such a queer father but neither was he very bad
 
 I used data from libriSpeech and TedLium datasets for obtaining trained speech data
 ![ScreenShot](/screenshot/graph1.png)
