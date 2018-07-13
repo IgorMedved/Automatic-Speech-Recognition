@@ -9,6 +9,8 @@ This project was submitted as final project for second semester of Artificial In
 In this project a deep neural network that functions as part of an end-to-end automatic speech recognition (ASR) pipeline was built!
 The theory is based on following textbooks and articles
 [Source and Filter speech models, Forier Analysis and MFCC](http://web.science.mq.edu.au/~cassidy/comp449/html/ch07.html#d0e1094)
+
+
 [Deep speech 2: End-to-end speech recognition in english and mandarin. International Conference on Machine Learning. 2016.](https://arxiv.org/pdf/1512.02595v1.pdf )
 
 ![ASR Pipeline][image1]
@@ -101,7 +103,7 @@ This is the best model. By adding .2 dropout to model_end, the training process 
 
 ## Final Architecture
 
-For the final architecture I decided to choose the architecture with CNN layer that would preprocess spectrogram input and prepare the features for the input into several layers of RNN that act similar to phonetic and language models. The preliminary results indicated that simply stacking the RNN layers on top of each other was slightly more effective than the bidirectional RNN, so that is the architecture I chose. I experimented with the amount of RNN layers and dropout and finally the architecture with 1 CNN layer and 4 rnn layers and .2 dropout seemed to produce the best and most stable results. One final note. I used the combined 100 hour and 360 hour dataset for training the model. The clear trend from the experiments was that the more the amount of data I have for training the better the results are irrespective of the exact architecture used. Also with the increased amount of data the bigger models tended to become more powerful and overfit less.
+For the final architecture I decided to choose the architecture with CNN layer that would preprocess spectrogram input and prepare the features for the input into several layers of RNN that act similar to phonetic and language models. The preliminary results indicated that simply stacking the RNN layers on top of each other was slightly more effective than the bidirectional RNN, so that is the architecture I chose. I experimented with the amount of RNN layers and dropout and finally the architecture with 1 CNN layer and 4 rnn layers and .2 dropout seemed to produce the best and most stable results. One final note. I used the combined 100 hour, 360 hour dataset, 500 hour dataset and TEDLIUM3 dataset for training the model. The clear trend from the experiments was that the more the amount of data I have for training the better the results are irrespective of the exact architecture used. Also with the increased amount of data the bigger models tended to become more powerful and overfit less.
 
 Future work: I also worked on a separate language model for which I downloaded 3gb worth of text files from project gutenberg. I preprocessed the files by removing them from archives and removing irrelevant header and footer texts, and then removing all the characters except letters and space and converting to lowercase. Due to the time constraints I could not finish model training or incorporate the language model into ASR. I hope to do it in the near future
 
